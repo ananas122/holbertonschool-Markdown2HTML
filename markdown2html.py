@@ -7,6 +7,7 @@ import os
 import markdown
 
 def markdowntohtml():
+    """convert file md to html"""
     # Vérifier si le nombre d'arguments est inférieur à 2
     if len(sys.argv) < 3:
         print("Usage: ./markdown2html.py README.md README.html", file=sys.stderr)
@@ -29,6 +30,7 @@ def markdowntohtml():
 
 
 def convert_heading(line):
+    """Convert heading"""
     if line.startswith("#"):
         level = len(line.split()[0])
         content = line.strip("#").strip()
