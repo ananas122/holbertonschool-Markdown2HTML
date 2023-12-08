@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 """Markdown to HTML Converter"""
 
-
 import sys
 import os
-
+import markdown
 
 def markdowntohtml():
     # Vérifier si le nombre d'arguments est inférieur à 2
@@ -22,8 +21,18 @@ def markdowntohtml():
         print(f"Missing {markdown_file}", file=sys.stderr)
         sys.exit(1)
 
-    # Si ok, terminer  sortie 0
+    # Ajouter ici le code pour lire le fichier Markdown et le convertir en HTML
+
+    # Si ok, terminer avec sortie 0
     sys.exit(0)
+
+
+def convert_heading(line):
+    if line.startswith("#"):
+        level = len(line.split()[0])
+        content = line.strip("#").strip()
+        return f"<h{level}>{content}</h{level}>"
+    return line
 
 
 if __name__ == "__main__":
