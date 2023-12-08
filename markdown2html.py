@@ -30,7 +30,7 @@ def markdowntohtml():
 
 
 def convert_heading(line):
-    """Convert heading"""
+    """Convert heading line """
     if line.startswith("#"):
         level = len(line.split()[0])
         content = line.strip("#").strip()
