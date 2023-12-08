@@ -1,9 +1,12 @@
 #!/usr/bin/python3
+"""Markdown to HTML Converter"""
+
+
 import sys
 import os
 
 
-def main():
+def markdowntohtml():
     # Vérifier si le nombre d'arguments est inférieur à 2
     if len(sys.argv) < 3:
         print("Usage: ./markdown2html.py README.md README.html", file=sys.stderr)
