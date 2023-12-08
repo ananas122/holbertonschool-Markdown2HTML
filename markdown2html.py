@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-"""Markdown to HTML Converter"""
-"""Task 1"""
+"""
+Markdown to HTML Converter
+Task 1: Ce script est destiné à convertir un fichier Markdown en fichier HTML.
+"""
 
 import sys
 import os
